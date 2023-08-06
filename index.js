@@ -5,22 +5,21 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-inquirer
-  .prompt([
+inquirer.prompt([
     {
-      type: 'input',
-      message: 'What is the title of your project?',
-      name: 'Project title',
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'Project title',
     },
     {
-      type: 'input',
-      message: 'Provide a short description explaining the what, why, and how of your project.',
-      name: 'Description',
+        type: 'input',
+        message: 'Provide a short description explaining the what, why, and how of your project.',
+        name: 'Description',
     },
     {
-      type: 'input',
-      message: 'What are the steps required to install your project?',
-      name: 'Installation instructions',
+        type: 'input',
+        message: 'What are the steps required to install your project?',
+        name: 'Installation instructions',
     },
     {
         type: 'input',
@@ -41,25 +40,31 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Write tests for you application.',
+        message: 'Write test instructions for your application.',
         name: 'Test Instructions',
     },
     {
         type: 'input',
         message: 'What is your GitHub username?',
-        name: 'Questions',
+        name: 'GitHub',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'Email',
     },
   ])
   .then((response) => {
-    console.log(response);
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+
   });
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeToFile(filename, JSON.stringify(date, null, '\t'),
+    
+    )
+}
 
 // TODO: Create a function to initialize app
 function init() {}
