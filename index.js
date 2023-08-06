@@ -6,7 +6,6 @@ const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 
-
 const questions = [
     {
         type: 'input',
@@ -68,7 +67,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answers) => { 
         const READMEfile = generateREADME(answers);
-        writeToFile('README.md', READMEContent);
+        writeToFile('README.md', READMEfile);
     });
 }
 
