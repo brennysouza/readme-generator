@@ -2,11 +2,10 @@
 // Inquirer package included in package.json
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const inquirer = require('inquirer');
+const fs = require('fs');
 
-// const inquirer = require('inquirer');
-
-questions
+inquirer
   .prompt([
     {
       type: 'input',
@@ -21,7 +20,7 @@ questions
     {
       type: 'input',
       message: 'What are the steps required to install your project?',
-      name: 'Installation Instructions',
+      name: 'Installation instructions',
     },
     {
         type: 'input',
@@ -29,21 +28,34 @@ questions
         name: 'Usage',
     },
     {
-        type: 'input',
-        message: 'List your collaborators, if any, with links to their GitHub profiles.',
-        name: 'Credits',
+        // Go on inquirer link and figure out how to add a list of licenses to choose as per challenge instructions
+        type: 'list',
+        message: 'What is the license found on your repo?',
+        name: 'License',
+        choices: ['MIT License', 'Apache 2.0 License', 'Mozilla Public License 2.0'],
     },
     {
         type: 'input',
-        message: 'What is the license found on your repo? Type N/A if there are none.',
-        name: 'License',
+        message: 'List your collaborators, if any, with links to their GitHub profiles.',
+        name: 'Contribution',
+    },
+    {
+        type: 'input',
+        message: 'Write tests for you application.',
+        name: 'Test Instructions',
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'Questions',
     },
   ])
-  .then((response) =>
+  .then((response) => {
+    console.log(response);
     response.confirm === response.password
       ? console.log('Success!')
       : console.log('You forgot your password already?!')
-  );
+  });
 
 
 // TODO: Create a function to write README file
