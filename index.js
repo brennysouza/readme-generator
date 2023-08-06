@@ -2,7 +2,7 @@
 // Inquirer package included in package.json
 
 const inquirer = require('inquirer');
-const fs = require('fs');
+const readMeFile = require('./lib/readmeFile');
 
 // TODO: Create an array of questions for user input
 
@@ -58,7 +58,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => 
+    readMeFile.writeFile(fileName, data, (err) => 
         err ? console.error(err) : console.log('README successfully generated!')
     );
 }
