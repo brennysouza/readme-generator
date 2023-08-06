@@ -10,18 +10,33 @@ questions
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'What is the title of your project?',
+      name: 'Project title',
     },
     {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
+      type: 'input',
+      message: 'Provide a short description explaining the what, why, and how of your project.',
+      name: 'Description',
     },
     {
-      type: 'password',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
+      type: 'input',
+      message: 'What are the steps required to install your project?',
+      name: 'Installation Instructions',
+    },
+    {
+        type: 'input',
+        message: 'Provide instructions and examples on how to use your project.',
+        name: 'Usage',
+    },
+    {
+        type: 'input',
+        message: 'List your collaborators, if any, with links to their GitHub profiles.',
+        name: 'Credits',
+    },
+    {
+        type: 'input',
+        message: 'What is the license found on your repo? Type N/A if there are none.',
+        name: 'License',
     },
   ])
   .then((response) =>
