@@ -4,6 +4,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const readmeFile = require('./lib/readmeFile');
+const markdownIt = require('markdown-it')();
 
 // TODO: Create an array of questions for user input
 
@@ -57,18 +58,25 @@ const questions = [
     },
 ];
 
+function removeHTMLTags(htmlContent) {
+    const regex = /<[^>]*>/g;
+    return htmlContent.replace(regex, '');
+}
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => 
+    const htmlContent = markdownIt.render(data);
+    const markdownContent = removeHTMLTags(htmlContent);
+    fs.writeFile(fileName, markdownContent, (err) => 
         err ? console.error(err) : console.log('README successfully generated!')
     );
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((responses) => { 
-        const readmeContent = readmeFile.generateReadme(responses);
-        writeToFile('README.md', readmeContent);
+    inquirer.prompt(questions).then((responses, data) => { 
+        const readmeContent = readmeFile.generateReadme(responses, data);
+        writeToFile('./README.md', readmeContent, data);
     });
 }
 
