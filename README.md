@@ -1,6 +1,6 @@
-# test
+# na
 
-![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
+![License](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)
 
 
 ## Table of Contents 
@@ -22,15 +22,17 @@ na
 na
 
 ## License
-This application is covered by the MIT License license.
+**IMPORTANT:** This application is covered by the Mozilla Public License 2.0.
 
 ## Contribution
-ne
+na
 
 ## Tests
 na
 
 ## Questions
-- GitHub Username: na
-- Email: na
+:wave: Feel free to reach me at any time by these two contact methods below should you have any additional questions, comments, or concerns!
+
+- GitHub Username: [brennysouza](https://github.com/brennysouza/readme-generator)
+- Email: brennysouza@gmail.com 
 
