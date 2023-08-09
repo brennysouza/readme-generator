@@ -5,6 +5,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const readmeFile = require('./lib/readmeFile');
 const markdownIt = require('markdown-it')();
+// const badgeUrl = `https://img.shields.io/badge/license-${encodeURIComponent(responses.License)}-brightgreen`;
+
 
 // TODO: Create an array of questions for user input
 
@@ -77,14 +79,14 @@ function init() {
     inquirer.prompt(questions).then((responses, data) => { 
         const readmeContent = readmeFile.generateReadme({
             Title: responses.Title,
-            description: responses.Description,
-            installation: responses.Installation,
-            usage: responses.Usage,
-            license: responses.License,
-            contribution: responses.Contribution,
-            tests: responses.Tests,
-            github: responses.GitHub.replace(/\s+/g, '-'),
-            email: responses.Email,
+            Description: responses.Description,
+            Installation: responses.Installation,
+            Usage: responses.Usage,
+            License: responses.License,
+            Contribution: responses.Contribution,
+            Tests: responses.Tests,
+            GitHub: responses.GitHub.replace(/\s+/g, '-'),
+            Email: responses.Email,
         });
 
         // const readmeContent = readmeFile.generateReadme(responses, data);

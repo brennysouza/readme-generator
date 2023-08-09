@@ -1,5 +1,8 @@
 # test
 
+![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
+
+
 ## Table of Contents 
 - [Description](#description)
 - [Installation](#installation)
@@ -10,24 +13,24 @@
 - [Questions](#questions)
 
 ## Description 
-undefined
+na
 
 ## Installation
-undefined
+na
 
 ## Usage
-undefined
+na
 
 ## License
-undefined
+This application is covered by the MIT License license.
 
 ## Contribution
-undefined
+ne
 
 ## Tests
-undefined
+na
 
 ## Questions
-- GitHub Username: undefined
-- Email: undefined
+- GitHub Username: na
+- Email: na
 
