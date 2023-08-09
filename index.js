@@ -75,8 +75,20 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses, data) => { 
-        const readmeContent = readmeFile.generateReadme(responses, data);
-        writeToFile('./README.md', readmeContent, data);
+        const readmeContent = readmeFile.generateReadme({
+            Title: responses.Title,
+            description: responses.Description,
+            installation: responses.Installation,
+            usage: responses.Usage,
+            license: responses.License,
+            contribution: responses.Contribution,
+            tests: responses.Tests,
+            github: responses.GitHub.replace(/\s+/g, '-'),
+            email: responses.Email,
+        });
+
+        // const readmeContent = readmeFile.generateReadme(responses, data);
+        writeToFile('README.md', readmeContent);
     });
 }
 
