@@ -25,6 +25,8 @@ Please refer to installation section of README.
 
 ![Application Screenshot](assets/images/Screenshot 2023-08-11 at 3.04.20 PM.png)
 
+Link to repo: https://github.com/brennysouza/readme-generator
+
 
 ## License
 **IMPORTANT:** This application is covered by the MIT License.
