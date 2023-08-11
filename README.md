@@ -21,9 +21,9 @@ Users should open the index.js file inside their local machine, open a new termi
 ## Usage
 Please refer to installation section of README.
 
-![Application Video Walkthrough](https://drive.google.com/file/d/1unPqkaW29Rh7oJnp9spneNuVd-Hw5Xi3/view)
+[![Application Video Walkthrough](https://drive.google.com/file/d/1unPqkaW29Rh7oJnp9spneNuVd-Hw5Xi3/view)]
 
-![Application Screenshot](assets/images/Screenshot 2023-08-11 at 3.04.20 PM.png)
+![Application Screenshot](assets/images/readmegenerator.png)
 
 Link to repo: https://github.com/brennysouza/readme-generator
 
