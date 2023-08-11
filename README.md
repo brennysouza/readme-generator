@@ -1,4 +1,4 @@
-# Readme Generator
+# README GENERATOR
 
 ![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
 
@@ -13,13 +13,17 @@
 - [Questions](#questions)
 
 ## Description 
-This project is a readme generator for users to use freely in order for them to construct structured and organized readme files.
+This is a readme generator focused on assisting users to construct a well structured read me file with necessary information needed. Most do not know how to construct a read me. Therefore the aim of this is to help those who do not know what to do. Some of my bootcamp fellow students were having trouble before. This is a great application to help them.
 
 ## Installation
-na
+Users should open the index.js file inside their local machine, open a new terminal, run npm i, run node index.js, and proceed to answer questions that will show in terminal.
 
 ## Usage
-na
+Please refer to installation section of README.
+
+https://drive.google.com/file/d/1unPqkaW29Rh7oJnp9spneNuVd-Hw5Xi3/view
+
+
 
 ## License
 **IMPORTANT:** This application is covered by the MIT License.
