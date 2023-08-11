@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 // Inquirer package included in package.json
 
+// These are variables needed 
 const fs = require('fs');
 const inquirer = require('inquirer');
 const readmeFile = require('./lib/readmeFile');
@@ -9,7 +10,7 @@ const markdownIt = require('markdown-it')();
 
 
 // TODO: Create an array of questions for user input
-
+// This is an array of objects for the file. Once generated, these will show up on readme. Once initiated with node, these will be the prompted questions that will generate the readme. 
 const questions = [
     {
         type: 'input',
@@ -60,12 +61,14 @@ const questions = [
     },
 ];
 
+// This code removes the html tags, and will only display the data between each html tag so that when the readme file is generated, it wont show html tags. 
 function removeHTMLTags(htmlContent) {
     const regex = /<[^>]*>/g;
     return htmlContent.replace(regex, '');
 }
 
 // TODO: Create a function to write README file
+// This function will allow the the data to render as html and will remove any html tags once rendered. 
 function writeToFile(fileName, data) {
     const htmlContent = markdownIt.render(data);
     const markdownContent = removeHTMLTags(htmlContent);
@@ -75,6 +78,7 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
+// The code below is the data that will be inputted in its designated place within the readme file. 
 function init() {
     inquirer.prompt(questions).then((responses, data) => { 
         const readmeContent = readmeFile.generateReadme({
@@ -89,7 +93,6 @@ function init() {
             Email: responses.Email,
         });
 
-        // const readmeContent = readmeFile.generateReadme(responses, data);
         writeToFile('README.md', readmeContent);
     });
 }
