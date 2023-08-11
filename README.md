@@ -32,7 +32,7 @@ Link to repo: https://github.com/brennysouza/readme-generator
 **IMPORTANT:** This application is covered by the MIT License.
 
 ## Contribution
-na
+Code ideas came from previous activity 20 of module 9 where we spoke about inquirer. In addition, some help also came from fellow classmate, Emmanual Cordero. 
 
 ## Tests
 na
